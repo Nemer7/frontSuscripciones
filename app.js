@@ -146,10 +146,10 @@ document.addEventListener("DOMContentLoaded", function() {
             try {
                 const params = new URLSearchParams(customPlan);
                 const precio = await apiCall(`${API_BASE_URL}/consultaPrecioPlan?${params}`);
-                document.getElementById('precioEstimado').textContent = `Precio estimado: $${precio}`;
+                document.getElementById('precioEstimado').textContent = `$${precio}`;
             } catch (error) {
-                console.error("Error al consultar el precio:", error);
-                document.getElementById('precioEstimado').textContent = "Error al consultar el precio";
+                console.error("$ 0", error);
+                document.getElementById('precioEstimado').textContent = "$ 0";
             }
         }
     }
