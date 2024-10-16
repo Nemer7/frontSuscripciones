@@ -181,6 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <th>Anuncios</th>
                     <th>Contenido Exclusivo</th>
                     <th>Almacenamiento Extra</th>
+                    <th>Precio</th>
                 </tr>
             </thead>
             <tbody>
@@ -188,26 +189,27 @@ document.addEventListener("DOMContentLoaded", function() {
                     <tr>
                         <td>${s.nombreUsuario}</td>
                         <td>${s.tipoPlan}</td>
-                        <td>${s.calidad}</td>
-                        <td>${s.dispositivos}</td>
-                        <td>${s.anuncios ? 'Sí' : 'No'}</td>
+                        <td>${s.calidadVideo || 'N/A'}</td>
+                        <td>${s.dispositivosPermitidos || 'N/A'}</td>
+                        <td>${s.incluyeAnuncios ? 'Sí' : 'No'}</td>
                         <td>${s.contenidoExclusivo ? 'Sí' : 'No'}</td>
                         <td>${s.almacenamientoExtra} GB</td>
+                        <td>$${s.precioPlan.toFixed(2)}</td>
                     </tr>
                 `).join('')}
             </tbody>
         </table>
         `;
-
+    
         const modal = document.createElement('div');
         modal.className = 'modal';
         modal.innerHTML = tablaHTML;
-
+    
         const closeButton = document.createElement('button');
         closeButton.textContent = 'Cerrar';
         closeButton.className = 'close-button';
         closeButton.onclick = () => document.body.removeChild(modal);
-
+    
         modal.appendChild(closeButton);
         document.body.appendChild(modal);
     }
