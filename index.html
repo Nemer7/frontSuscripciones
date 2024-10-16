@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Suscripción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Elige tu Plan de Suscripción</h1>
+        <div class="user-name">
+            <label for="name">Nombre de usuario:</label>
+            <input type="text" id="name" placeholder="Ingresa tu nombre">
+        </div>
+        <div class="plans">
+            <div class="plan-card" id="basic">
+                <h2>Plan Básico</h2>
+                <div class="plan-price">$4.99</div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Calidad de Video:</span>
+                    <span class="plan-detail-value">SD</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Dispositivos:</span>
+                    <span class="plan-detail-value">1</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Incluye Anuncios:</span>
+                    <span class="plan-detail-value">Sí</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Contenido Exclusivo:</span>
+                    <span class="plan-detail-value">No</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Almacenamiento Extra:</span>
+                    <span class="plan-detail-value">0 GB</span>
+                </div>
+            </div>
+            <div class="plan-card" id="standard">
+                <h2>Plan Estándar</h2>
+                <div class="plan-price">$14.99</div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Calidad de Video:</span>
+                    <span class="plan-detail-value">HD</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Dispositivos:</span>
+                    <span class="plan-detail-value">2</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Incluye Anuncios:</span>
+                    <span class="plan-detail-value">No</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Contenido Exclusivo:</span>
+                    <span class="plan-detail-value">No</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Almacenamiento Extra:</span>
+                    <span class="plan-detail-value">20 GB</span>
+                </div>
+            </div>
+            <div class="plan-card" id="premium">
+                <h2>Plan Premium</h2>
+                <div class="plan-price">$20.99</div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Calidad de Video:</span>
+                    <span class="plan-detail-value">4K</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Dispositivos:</span>
+                    <span class="plan-detail-value">4</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Incluye Anuncios:</span>
+                    <span class="plan-detail-value">No</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Contenido Exclusivo:</span>
+                    <span class="plan-detail-value">Sí</span>
+                </div>
+                <div class="plan-detail">
+                    <span class="plan-detail-label">Almacenamiento Extra:</span>
+                    <span class="plan-detail-value">50 GB</span>
+                </div>
+            </div>
+            <div class="plan-card" id="custom">
+                <h2>Plan Personalizado</h2>
+                <p>Configura tu suscripción</p>
+                <form id="customForm">
+                    <div class="plan-detail">
+                        <label for="calidadVideo">Calidad de Video:</label>
+                        <select id="calidadVideo" name="calidadVideo">
+                            <option value="SD">SD</option>
+                            <option value="HD">HD</option>
+                            <option value="4K">4K</option>
+                        </select>
+                    </div>
+                    <div class="plan-detail">
+                        <label for="dispositivosPermitidos">Dispositivos Permitidos:</label>
+                        <input type="number" id="dispositivosPermitidos" name="dispositivosPermitidos" min="1" max="6" placeholder="Ej: 3">
+                    </div>
+                    <div class="plan-detail">
+                        <label for="incluyeAnuncios">Incluye Anuncios:</label>
+                        <input type="checkbox" id="incluyeAnuncios" name="incluyeAnuncios">
+                    </div>
+                    <div class="plan-detail">
+                        <label for="contenidoExclusivo">Contenido Exclusivo:</label>
+                        <input type="checkbox" id="contenidoExclusivo" name="contenidoExclusivo">
+                    </div>
+                    <div class="plan-detail">
+                        <label for="almacenamientoExtra">Almacenamiento Extra (GB):</label>
+                        <input type="number" id="almacenamientoExtra" name="almacenamientoExtra" min="0" max="100" placeholder="Ej: 50">
+                    </div>
+                </form>
+                <div id="precioEstimado"></div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="subscribe">Suscribirse</button>
+            <button id="renew">Renovar Suscripción</button>
+            <button id="consultarSuscripciones">Consultar Suscripciones</button>
+            <button id="clonarSuscripcion">Clonar Suscripción</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
